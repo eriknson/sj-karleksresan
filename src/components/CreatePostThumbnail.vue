@@ -1,7 +1,7 @@
 <template>
   <v-card>
-    <v-card-title>Hitta din tågflört</v-card-title>
-    <v-card-text>Lorem ipsum, dolor set mit amet</v-card-text>
+    <v-card-title>Skapa ett inlägg</v-card-title>
+    <v-card-text>Hitta din kärlek! Lorem ipsum, dolor set mit amet</v-card-text>
     <v-card-actions
       ><v-dialog v-model="dialog" persistent max-width="600px">
         <template v-slot:activator="{ on, attrs }">
@@ -78,13 +78,22 @@
 
 <script lang="ts">
 import Vue from "vue";
+import firebase from "../firebaseConfig";
+const db = firebase.firestore();
 
 export default Vue.extend({
   name: "CreatePostThumbnail",
   methods: {
     savePostData: function(postData: Record<string, unknown>) {
-      console.log(postData);
       this.dialog = false;
+      db.collection("posts")
+        .add(postData)
+        .then(() => {
+          console.log(postData);
+        })
+        .catch(error => {
+          console.error("Error writing to firebase: ", error);
+        });
     }
   },
   computed: {
