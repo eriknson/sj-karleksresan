@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="home-hero-img">Kärleksresan</div>
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <HelloWorld msg="Startsida" />
   </div>
 </template>
 
