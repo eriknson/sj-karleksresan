@@ -14,21 +14,15 @@
         </router-link>
       </div>
       <h2>Kärleksresan</h2>
+      <spacer></spacer>
+      <h2 class="ml-4 mt-1 overline">V0.0001</h2>
     </v-app-bar>
     <v-main class="secondary">
       <router-view />
     </v-main>
     <v-footer padless>
       <v-card width="100%" flat tile class="primary white--text text-center">
-        <v-card-text class="white--text">
-          Länkar till legal och sånt annat viktigt som behöver va me kan man ha
-          här.
-        </v-card-text>
-        <v-card-text class="white--text"
-          ><strong
-            >Copyright {{ new Date().getFullYear() }} — SJ AB
-          </strong></v-card-text
-        >
+        <v-card-text class="white--text"> ❤️❤️❤️ </v-card-text>
       </v-card>
     </v-footer>
   </v-app>

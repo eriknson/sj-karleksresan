@@ -3,31 +3,27 @@
     <v-snackbar top timeout="11000" v-model="snackbar">
       Snyggt! Ditt inlägg är postat. Uppdatera sidan för att se det.
     </v-snackbar>
-    <v-card-title>Skapa ett inlägg</v-card-title>
+    <v-card-title>Hitta flörten från tågresan</v-card-title>
     <v-card-text
-      >Hitta din kärlek! Lorem ipsum dolor sit amet, consectetur adipiscing
-      elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-      aliquip ex ea commodo consequat.</v-card-text
-    >
+      >Många av oss har haft en flirt på ett tåg någon gång. Ögonkontakt med
+      snyggingen tvärs över gången, ett fnittrigt ögonblick när man tränger sig
+      förbi varandra i bistron eller händer som nuddar varandra när man
+      tillsammans lyfter upp en tung väska. En känsla av att det skulle ha
+      kunnat bli något. Om den ene inte gått av tåget.
+    </v-card-text>
     <v-card-actions
       ><v-dialog v-model="dialog" max-width="600px">
         <template v-slot:activator="{ on, attrs }">
           <v-container class="pa-2"
-            ><v-btn
-              color="secondary primary--text"
-              dark
-              v-bind="attrs"
-              v-on="on"
-            >
-              Skapa inlägg
+            ><v-btn color="primary white--text" dark v-bind="attrs" v-on="on">
+              Skapa inlägg ❤️
             </v-btn></v-container
           >
         </template>
         <v-card>
           <v-container>
             <v-card-title>
-              <span class="heading-1">När, hur och var sågs ni? 💚</span>
+              <span class="heading-1">När, hur och var sågs ni?</span>
             </v-card-title>
             <v-card-subtitle
               >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -54,11 +50,11 @@
                   ></v-date-picker>
                 </v-col>
                 <v-col cols="12" sm="12" md="12">
-                  <v-autocomplete
+                  <v-select
                     v-model="flirtEndStation"
                     :items="destinations"
                     label="Tågets slutstation"
-                  ></v-autocomplete>
+                  ></v-select>
                 </v-col>
                 <!-- What happend -->
                 <v-col cols="12" sm="6">

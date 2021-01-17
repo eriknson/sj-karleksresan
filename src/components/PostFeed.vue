@@ -27,7 +27,7 @@
                   post.date
                 }}</v-list-item-subtitle>
                 <v-list-item-title>{{
-                  post.activity[0] + " på ett tåg mot " + post.endStation
+                  post.activity + " på ett tåg mot " + post.endStation
                 }}</v-list-item-title>
               </v-list-item-content></v-card
             >
