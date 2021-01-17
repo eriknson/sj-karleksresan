@@ -22,7 +22,6 @@
     </v-main>
     <v-footer padless>
       <v-card width="100%" flat tile class="primary white--text text-center">
-        <v-card-text class="white--text"> ❤️❤️❤️ </v-card-text>
       </v-card>
     </v-footer>
   </v-app>
