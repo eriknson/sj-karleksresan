@@ -14,8 +14,6 @@
         </router-link>
       </div>
       <h2>Kärleksresan</h2>
-      <v-spacer></v-spacer>
-      <v-btn @click="$router.push('create')" class="primary">Skapa inlägg</v-btn>
     </v-app-bar>
     <v-main class="secondary">
       <router-view />
@@ -23,10 +21,13 @@
     <v-footer padless>
       <v-card width="100%" flat tile class="primary white--text text-center">
         <v-card-text class="white--text">
-          Länkar till legal och sånt annat viktigt som behöver va me kan man ha här.
+          Länkar till legal och sånt annat viktigt som behöver va me kan man ha
+          här.
         </v-card-text>
         <v-card-text class="white--text"
-          ><strong>Copyright {{ new Date().getFullYear() }} — SJ AB </strong></v-card-text
+          ><strong
+            >Copyright {{ new Date().getFullYear() }} — SJ AB
+          </strong></v-card-text
         >
       </v-card>
     </v-footer>
@@ -41,6 +42,6 @@ export default Vue.extend({
 
   data: () => ({
     //
-  }),
+  })
 });
 </script>
