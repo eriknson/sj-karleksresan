@@ -1,6 +1,6 @@
 <template>
   <v-card class="mt-4 pb-4" :loading="this.loading" tile>
-    <v-card-title>Senaste inläggen</v-card-title>
+    <v-card-title>Lorem ipsum dolor sit amet</v-card-title>
     <div class="d-flex flex-wrap">
       <v-card
         class="pa-0 ml-4 mb-4"
@@ -10,7 +10,7 @@
         :key="post.id"
         v-for="post in this.posts"
       >
-        <v-dialog v-model="dialog" max-width="600px">
+        <v-dialog max-width="600px">
           <template v-slot:activator="{ on, attrs }">
             <v-card
               class="grey lighten-3 d-flex"
@@ -32,11 +32,22 @@
               </v-list-item-content></v-card
             >
           </template>
-          <v-card
-            ><v-container
-              ><p :key="row" v-for="row in post">{{ row }}</p></v-container
-            ></v-card
-          >
+          <v-card class="pa-4"
+            ><v-card-text>
+              <div class="body-3">{{ post.date }}</div>
+              <p class="title text--primary">
+                {{ post.activity + " på ett tåg mot " + post.endStation }}
+              </p>
+              <div class="text--primary">
+                {{ post.description }}
+              </div>
+            </v-card-text>
+            <v-card-actions>
+              <v-btn outlined elevated="2" class="ml-1" color="primary">
+                Svara på inlägg
+              </v-btn>
+            </v-card-actions>
+          </v-card>
         </v-dialog>
       </v-card>
     </div>

@@ -14,7 +14,6 @@
         </router-link>
       </div>
       <h2>Kärleksresan</h2>
-      <spacer></spacer>
       <h2 class="ml-4 mt-1 overline">V0.0001</h2>
     </v-app-bar>
     <v-main class="secondary">
